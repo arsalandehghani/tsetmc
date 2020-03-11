@@ -1,2 +1,2 @@
-# tsetmcdataanalysis
+# tsetmc
 Tse Tmc Data Analysis
