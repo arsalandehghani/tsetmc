@@ -23,3 +23,6 @@ def read_tsetmc_groups_dictionary():
             dicGroups[code] = desc
     return dicGroups
 
+def convert_dictionary_to_DataFrame(dic, keyColumnName='k', valueColumnName='v'):
+    new_data_frame = pd.DataFrame(list(dic.items()), columns=[keyColumnName, valueColumnName])
+    return new_data_frame
