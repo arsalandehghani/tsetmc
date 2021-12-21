@@ -26,3 +26,8 @@ def read_tsetmc_groups_dictionary():
 def convert_dictionary_to_DataFrame(dic, keyColumnName='k', valueColumnName='v'):
     new_data_frame = pd.DataFrame(list(dic.items()), columns=[keyColumnName, valueColumnName])
     return new_data_frame
+
+def read_tsetmc_groups_DataFrame(verbose=True):
+    dicGroups = read_tsetmc_groups_dictionary(verbose=verbose)
+    dataFrameGroups = convert_dictionary_to_DataFrame(dicGroups, keyColumnName='groupKey', valueColumnName='groupName')
+    return dataFrameGroups
