@@ -1,2 +1,7 @@
+bs4
+datetime
 numpy
+os
 pandas
+requests
+re
