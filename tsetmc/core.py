@@ -51,3 +51,12 @@ def read_tsetmc_groups_DataFrame():
             arrGroups.add([code, desc])
     group_DataFrame = pd.DataFrame(arrGroups, columns)
     return group_DataFrame
+
+def read_tsetmc_groups_DataFrame_pd():
+    url = 'http://www.tsetmc.com/Loader.aspx?ParTree=111C1213'
+    page = requests.get(url, allow_redirects=True)
+    tables = pd.read_html(page.content, encoding="UTF-8")
+    if len(tables)>0:
+        return tables[0]
+    else:
+        return None
